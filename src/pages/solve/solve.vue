@@ -97,7 +97,11 @@
     methods: {
       showImg (val) {
         this.imgUrl = require(`./images/detail-${val}.jpg`)
-        this.imgTop = '0px'
+        if (this.imgTop === '-500px') {
+          this.imgTop = '0'
+        } else {
+          this.imgTop = '-500px'
+        }
       },
       fadeimg () {
         this.imgTop = '-500px'
@@ -119,12 +123,14 @@
         margin: 0 auto;
     }
     h3{
+        padding-left: 16px;
         color: #c41335;
         font-size: 24px;
         height: 60px;
         padding-top: 30px;
     }
     h4{
+        padding-left: 16px;
         font-weight: normal;
         color: #a3a3a3;
         font-size: 20px;
@@ -137,7 +143,7 @@
         width: 68px;
         border: 1px solid #f3040b;
         background-color: #c41335;
-        margin-bottom: 13px;
+        margin: 0 0 13px 16px;
     }
     .transblocks{
         overflow: hidden;
@@ -175,7 +181,7 @@
         height: 200px;
         line-height: 200px;
         text-align: center;
-        font-size: 24px;
+        font-size: 18px;
         color: #fffefe;
         background-color: rgba(0, 0, 0, .62)
     }
