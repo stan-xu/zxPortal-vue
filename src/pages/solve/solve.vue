@@ -184,8 +184,11 @@
     .flip-container {
         perspective: 1000;
     }
-    .flip-container:hover .flipper{
-        transform: rotateX(180deg) !important;
+    // .flip-container:hover .flipper{
+    //     transform: rotateX(180deg) !important;
+    // }
+    .flip-container:hover .back{
+        z-index: 3;
     }
     .flip-container, .front, .back {
         width: 266px;
@@ -210,7 +213,7 @@
     }
     .back {
         cursor: pointer;
-        transform: rotateX(-180deg);
+        //transform: rotateX(-180deg);
     }
 
     /*  */
@@ -229,7 +232,7 @@
         text-align: center;
         width: 100%;
         height: 100%;
-        background-color: rgba(0,0,0,.62)
+        background-color: #fff;
     }
     .circle-info .shadeimg>img{
         height: 100%;
