@@ -1,6 +1,5 @@
 <template>
   <div id="app" class="solve">
-    <div style="height:75px;"></div>
     <h3>解决方案</h3>
     <h4>Expert technology</h4>
     <i class="title-line"></i>
@@ -122,8 +121,8 @@
     h3{
         color: #c41335;
         font-size: 24px;
-        height: 56px;
-        line-height: 56px;
+        height: 60px;
+        padding-top: 30px;
     }
     h4{
         font-weight: normal;
@@ -142,7 +141,7 @@
     }
     .transblocks{
         overflow: hidden;
-        padding-top: 14px;
+        padding-top: 10px;
     }
     .transblocks li{
         float: left;
