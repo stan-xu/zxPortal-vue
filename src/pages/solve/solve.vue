@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="solve">
+    <div style="height:75px;"></div>
     <h3>解决方案</h3>
     <h4>Expert technology</h4>
     <i class="title-line"></i>
@@ -90,7 +91,7 @@
     name: 'solve',
     data () {
       return {
-        imgTop: '-658px',
+        imgTop: '-500px',
         imgUrl: require('./images/detail-1.jpg')
       }
     },
@@ -100,7 +101,7 @@
         this.imgTop = '0px'
       },
       fadeimg () {
-        this.imgTop = '-658px'
+        this.imgTop = '-500px'
       }
     }
   }
@@ -117,7 +118,6 @@
         width: 1160px;
         background-color: #ebebeb;
         margin: 0 auto;
-        padding-top: 100px;
     }
     h3{
         color: #c41335;
@@ -138,22 +138,26 @@
         width: 68px;
         border: 1px solid #f3040b;
         background-color: #c41335;
-        margin-bottom: 56px;
+        margin-bottom: 13px;
     }
     .transblocks{
         overflow: hidden;
+        padding-top: 14px;
     }
     .transblocks li{
         float: left;
-        width: 365px;
+        width: 266px;
     }
-    .transblocks li:not(:last-child){
-        margin-right: 28px;
+    .transblocks li:first-child{
+        margin-left: 90px;
+    }
+    .transblocks li{
+        margin-right: 90px;
     }
     .transblocks li>div{
         position: relative;
-        width: 365px;
-        height: 274px;
+        width: 266px;
+        height: 200px;
         /* box-shadow: 5px 5px 10px #666; */
     }
     .transblocks li>span{
@@ -161,16 +165,16 @@
         width: 100%;
         margin: 30px 0;
         color: #c41335;
-        font-size: 24px;
+        font-size: 20px;
         text-align: center;
     }
     .transblocks .shade{
         position: absolute;
         top: 0;
         left: 0;
-        width: 365px;
-        height: 274px;
-        line-height: 274px;
+        width: 266px;
+        height: 200px;
+        line-height: 200px;
         text-align: center;
         font-size: 24px;
         color: #fffefe;
@@ -184,15 +188,15 @@
         transform: rotateX(180deg) !important;
     }
     .flip-container, .front, .back {
-        width: 365px;
-        height: 274px;
+        width: 266px;
+        height: 200px;
     }
     .flipper {
         transition: 0.6s;
         transform-style: preserve-3d;
         position: relative;
-        transform-origin: 100% 137px; /* 高的一半 */
-        height: 274px;
+        transform-origin: 100% 100px; /* 高的一半 */
+        height: 200px;
     }
     .front, .back {
         backface-visibility: hidden;
@@ -213,7 +217,7 @@
     .circle-info{
         position: relative;
         width: 100%;
-        height: 658px;
+        height: 500px;
         overflow: hidden;
     }
     .circle-info>div{
@@ -221,20 +225,25 @@
         overflow: hidden;
     }
     /* 点击出现的图片容器 */
-    .circle-info .shadeimg, .circle-info .shadeimg>img{
+    .circle-info .shadeimg{
+        text-align: center;
         width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.62)
+    }
+    .circle-info .shadeimg>img{
         height: 100%;
     }
     .shadeimg{
-        //top: -658px;
+        //top: -500px;
         transition: top 1.5s;
     }
     /* 圆 */
     .circle-info .circle{
-        left: 372px;
-        top: 80px;
-        width: 385px;
-        height: 385px;
+        left: 430px;
+        top: 10px;
+        width: 300px;
+        height: 300px;
         background: url('./images/circle.png');
     }
     /* list-style */
@@ -276,8 +285,8 @@
     }
     /* 专家团队技术服务 */
     .circle-info .tech-info{
-        left: 122px;
-        top: 204px;
+        left: 140px;
+        top: 100px;
     }
     .tech-info h5{
         width: 234px;
@@ -291,7 +300,7 @@
     /* 消防安全管家式服务 */
     .circle-info .keeper-info{
         left: 472px;
-        top: 500px;
+        top: 360px;
         border-left: 2px dashed #a5a5a5;
         padding-left: 12px;
     }
@@ -303,8 +312,8 @@
     }
     /* 媒体宣传服务 */
     .circle-info .media-info{
-        left: 776px;
-        top: 165px;
+        left: 770px;
+        top: 70px;
         width: 234px;
     }
     .media-info h5{
