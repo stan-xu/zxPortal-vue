@@ -1,8 +1,5 @@
 <template>
   <div id="app" class="page1">
-    <img src="../../images/logo.png" alt="">
-    <i class="fa fa-user"></i>
-    <el-button>123</el-button>
     <my-header/>
   </div>
 </template>
