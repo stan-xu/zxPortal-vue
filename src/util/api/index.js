@@ -1,6 +1,5 @@
 // api接口地址
 var root = '/jpress'
-// var root = ''
 
 // 引用axios
 var axios = require('axios')
@@ -78,5 +77,6 @@ export default {
   },
   delete: (url, params, success, fail) => {
     return apiAxios('DELETE', url, params, success, fail)
-  }
+  },
+  root
 }
