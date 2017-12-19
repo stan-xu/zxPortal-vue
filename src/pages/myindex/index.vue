@@ -1,15 +1,14 @@
 <template>
-  <div id="index">
-    <el-carousel :interval="4000" height="450px" type="card">
+  <div id="myIndex">
+    <my-header></my-header>
+    <el-carousel :interval="4000" height="450px">
       <el-carousel-item v-for="item in list" :key="item">
         <img :src="item" alt="" class="img-responsive">
       </el-carousel-item>
     </el-carousel>
     <module-introduction></module-introduction>
     <company-introduction></company-introduction>
-    <div class="">
-      <a href="zxzx"></a>
-    </div>
+    <my-footer></my-footer>
   </div>
 </template>
 
@@ -17,10 +16,12 @@
   import MyHeader from '../../components/myHeader'
   import CompanyIntroduction from './company-introduction'
   import ModuleIntroduction from './module-introduction'
+  import MyFooter from '../../components/myFooter'
 
   export default {
     name: 'index',
     components: {
+      MyFooter,
       ModuleIntroduction,
       CompanyIntroduction,
       MyHeader
@@ -38,13 +39,15 @@
   }
 </script>
 
-<style lang="scss">
-  .el-carousel {
-
-    width: 100%;
-    img {
-      height: 100%;
-      max-width: 100%;
+<style lang="scss" scoped>
+  #myIndex{
+    .el-carousel {
+      margin-top: 75px;
+      width: 100%;
+      img {
+        height: 100%;
+        max-width: 100%;
+      }
     }
   }
 </style>
