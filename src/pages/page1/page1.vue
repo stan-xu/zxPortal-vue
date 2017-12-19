@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="page1">
-    <my-header/>
+    <my-header selected="0"/>
   </div>
 </template>
 
