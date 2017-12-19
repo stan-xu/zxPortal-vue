@@ -1,6 +1,6 @@
 <template>
   <div id="myHeader">
-    <nav class="navbar navbar-static-top">
+    <nav class="navbar navbar-static-top" :style="{'left':-scroll+'px'}">
       <div class="container">
         <a class="navbar-brand" href="#"></a>
         <ul class="navbar-list">
@@ -31,6 +31,7 @@
     props: ['selected'],
     data () {
       return {
+        scroll: '',
         navlist: [
           {
             url: '/article-news-1.html',
@@ -67,8 +68,13 @@
         ]
       }
     },
+    methods: {
+      fixedScrollX () {
+        this.scroll = document.documentElement.scrollLeft || document.body.scrollLeft
+      }
+    },
     mounted: function () {
-      this.scroll = document.documentElement.scrollTop || document.body.scrollTop
+      window.addEventListener('scroll', this.fixedScrollX)
     }
   }
 </script>
@@ -99,9 +105,10 @@
       top: 0;
       margin-bottom: 20px;
       background-color: $header-bgcolor;
-      width: 100%;
       height: 75px;
       background-size: 100%;
+      min-width: 1200px;
+      width: 100%;
     }
     .navbar-static-top {
       z-index: 1000;
