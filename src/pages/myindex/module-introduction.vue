@@ -6,7 +6,7 @@
           <div class="module-icon">
             <img :src="item.icon" alt="module-icon" class="icon">
             <div class="icon-hover">
-              <a href=""><img :src="item.hoverIcon" alt="" class="icon">
+              <a :href="baseUrl+item.link"><img :src="item.hoverIcon" alt="" class="icon">
                 <div class="icon-hover-text center-block" :style="(index==1)?'margin-top:-31px':''"
                      v-html="item.hoverText"></div>
               </a>
@@ -29,25 +29,29 @@
             name: '解决方案',
             icon: require('./images/solve-icon.png'),
             hoverIcon: require('./images/solve-icon-hover.png'),
-            hoverText: '专家团队指导<br>消防安全管家式服务'
+            hoverText: '专家团队指导<br>消防安全管家式服务',
+            link: '/article-solve-1.html'
           },
           {
             name: '教育培训',
             icon: require('./images/edu-icon.png'),
             hoverIcon: require('./images/edu-icon-hover.png'),
-            hoverText: '一站式教育平<br>台，为建立专业<br>人才库提供保障'
+            hoverText: '一站式教育平<br>台，为建立专业<br>人才库提供保障',
+            link: '/article-onlineEdu-1.html'
           },
           {
             name: '中消百科',
             icon: require('./images/know-icon.png'),
             hoverIcon: require('./images/know-icon-hover.png'),
-            hoverText: '传递政策法规<br>科普消防安全知识'
+            hoverText: '传递政策法规<br>科普消防安全知识',
+            link: '/article-knowall-1.html'
           },
           {
             name: '紧急呼叫119',
             icon: require('./images/119-icon.png'),
             hoverIcon: require('./images/119-icon-hover.png'),
-            hoverText: '消防急救实验<br>观察类真人秀节目'
+            hoverText: '消防急救实验<br>观察类真人秀节目',
+            link: '/119'
           }]
       }
     }
