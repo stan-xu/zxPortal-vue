@@ -16,7 +16,7 @@ const env = require('../config/prod.env')
 var htmls = glob.sync('./src/pages/**/*.html').map(function (item) { //自动生成htmlWebpackPlugin多页面配置
   return new HtmlWebpackPlugin({
     favicon: path.resolve(__dirname, '../src/images/favicon.ico'),
-    filename: './' + item.slice(6),
+    filename: './taxonomy_article_' + item.substring(item.lastIndexOf('/')+1),
     template: item,
     inject: true,
     chunks: ['manifest', 'vendor',item.slice(12, -5)],
