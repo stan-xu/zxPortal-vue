@@ -123,7 +123,7 @@
         list-style: none;
       }
       width: 1160px;
-      min-height: 900px;
+      min-height: 550px;
       margin: 0 auto;
       padding-bottom: 50px;
       .title{
