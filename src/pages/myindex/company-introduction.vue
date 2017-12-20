@@ -2,7 +2,7 @@
   <section id="company-introduction">
     <el-row>
       <el-col :span="12">
-        <img src="./images/company-introduction-new.png" alt="" class="img-responsive">
+        <img src="./images/company-introduction.png" alt="" class="img-responsive">
       </el-col>
       <el-col :span="12" class="introduction-text v-outter-table">
         <div class="v-table-cell">

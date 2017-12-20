@@ -1,15 +1,16 @@
 <template>
-  <div id="myIndex">
-    <my-header></my-header>
-    <el-carousel :interval="4000" height="450px">
-      <el-carousel-item v-for="item in list" :key="item">
-        <img :src="item" alt="" class="img-responsive">
-      </el-carousel-item>
-    </el-carousel>
-    <module-introduction></module-introduction>
-    <company-introduction></company-introduction>
-    <my-footer></my-footer>
+  <div class="out">
+    <div id="myIndex">
+      <my-header></my-header>
+      <my-carousel :list="list" :height="450"></my-carousel>
+      <module-introduction></module-introduction>
+      <company-introduction></company-introduction>
+      <my-footer></my-footer>
+      <slide-nav></slide-nav>
+      <video-player></video-player>
+    </div>
   </div>
+
 </template>
 
 <script>
@@ -17,10 +18,16 @@
   import CompanyIntroduction from './company-introduction'
   import ModuleIntroduction from './module-introduction'
   import MyFooter from '../../components/myFooter'
+  import MyCarousel from '../../components/myCarousel'
+  import SlideNav from './slide-nav'
+  import VideoPlayer from './video-player'
 
   export default {
     name: 'index',
     components: {
+      VideoPlayer,
+      SlideNav,
+      MyCarousel,
       MyFooter,
       ModuleIntroduction,
       CompanyIntroduction,
@@ -40,7 +47,10 @@
 </script>
 
 <style lang="scss" scoped>
-  #myIndex{
+  .out {
+  }
+
+  #myIndex {
     .el-carousel {
       margin-top: 75px;
       width: 100%;
