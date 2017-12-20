@@ -153,6 +153,7 @@
               padding-left: 24px;
               height: 84px;
               border-top: 2px solid #d0d0d0;
+              transition: all .5s;
               p{
                 height: 24px;
                 line-height: 24px;
@@ -172,6 +173,11 @@
                 height: 86px;
                 line-height: 86px;
                 border-bottom: 2px solid #d0d0d0;
+              }
+            }
+            &:hover{
+              p{
+                color: #333;
               }
             }
             &.selected{
