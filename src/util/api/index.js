@@ -1,5 +1,5 @@
 // api接口地址
-var root = '/jpress'
+var root = ''
 
 // 引用axios
 var axios = require('axios')

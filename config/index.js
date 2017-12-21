@@ -62,8 +62,8 @@ module.exports = {
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     //assetsPublicPath: '/',
-    assetsPublicPath: '/jpress/templates/xiu/', //测试环境
-    //assetsPublicPath: 'http://cdn.zxzx119.com/templates/xiu/', //发布环境
+    //assetsPublicPath: '/jpress/templates/xiu/', //测试环境
+    assetsPublicPath: 'http://cdn.zxzx119.com/templates/xiu/', //发布环境
 
     /**
      * Source Maps
