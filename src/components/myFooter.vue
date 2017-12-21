@@ -16,8 +16,8 @@
             <el-col :span="12"><a href="http://www.zhongxiaogroup.com/">中消集团有限公司</a></el-col>
           </el-row>
           <el-row class="link-text">
-            <el-col :span="12"><a href="http://www.zxzx119.com/article-supervision-1.html">监督举报</a></el-col>
-            <el-col :span="12"><a href="http://www.zxzx119.com/article-reddoor-1.html">红门e家</a></el-col>
+            <el-col :span="12"><a :href="baseUrl+'/article-supervision-1.html'">监督举报</a></el-col>
+            <el-col :span="12"><a :href="baseUrl+'/article-reddoor-1.html'">红门e家</a></el-col>
           </el-row>
         </el-col>
         <el-col :span="8" class="tel-line">
@@ -42,10 +42,10 @@
       <div class="footer-topline"></div>
     </div>
     <div class="text-center footer-text-bottom">
-      <a href="http://www.zxzx119.com/about_us.html">关于我们</a>
-      <a href="http://www.zxzx119.com/legal.html">法律申明</a>
-      <a href="http://www.zxzx119.com/privacy.html">隐私保护</a>
-      <a href="http://www.zxzx119.com/disclaimer.html">免责声明</a>
+      <a :href="baseUrl+'/article-about-1.html'">关于我们</a>
+      <a :href="baseUrl+'/legal.html'">法律申明</a>
+      <a :href="baseUrl+'/privacy.html'">隐私保护</a>
+      <a :href="baseUrl+'/disclaimer.html'">免责声明</a>
     </div>
     <div class="text-center">
       ©2017 中消在线 沪ICP备16039608号
@@ -108,6 +108,4 @@
       }
     }
   }
-
-
 </style>
