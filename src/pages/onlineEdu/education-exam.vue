@@ -34,7 +34,7 @@
 
 <script>
   export default {
-    name: 'education-exam',
+    name: 'onlineEdu-exam',
     data: function () {
       return {
         moduleList: [

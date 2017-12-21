@@ -26,7 +26,7 @@
 
 <script>
   export default {
-    name: 'education-program'
+    name: 'onlineEdu-program'
   }
 </script>
 
