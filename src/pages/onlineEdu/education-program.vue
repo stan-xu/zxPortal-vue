@@ -12,8 +12,9 @@
               职业等级：建（构）筑物消防员职业共设五个等级，分别为：初级建（构）筑物消防员（国家职业资格五级）、中级建（构）筑物消防员（国家职业资格四级）、高级建（构）筑物消防员（国家职业资格三级）、建（构）筑物消防技师（国家职业资格二级）、建（构）筑物消防高级技师（国家职业资格一级）。</p>
             <p>职业环境：室内、外，常温。</p>
             <p>职业能力特征：具有一定的表达、学习、分析判断能力；视觉、嗅觉、听觉正常，动作协调、反应迅捷。</p>
-            <el-button type="primary" class="zxzx"><a href="http://baike.baidu.com/view/5392004.htm">百科详情</a>
-            </el-button>
+            <a href="http://baike.baidu.com/view/5392004.htm">
+              <el-button type="primary" class="zxzx">百科详情</el-button>
+            </a>
           </el-col>
           <el-col :span="11" class="education-text">
             <img src="./images/education-program.png" alt="" class="img-responsive">
@@ -54,7 +55,7 @@
           padding: 0;
           margin: 0;
           padding-right: 35px;
-          font-size: 12px;
+          font-size: 13px;
         }
       }
       img {

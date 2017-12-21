@@ -47,11 +47,14 @@
               </el-row>
             </el-col>
             <el-col :span="4" :offset="8">
-              <el-button class="zxzx" type="primary"><a
-                href="http://zxzx119.com/attachment/file/kaoshi.docx">考试资料包下载</a></el-button>
+              <a href="http://zxzx119.com/attachment/file/kaoshi.docx">
+                <el-button class="zxzx" type="primary">考试资料包下载</el-button>
+              </a>
             </el-col>
             <el-col :span="4">
-              <el-button class="zxzx pull-right" type="primary"><a href="http://zscx.osta.org.cn/">成绩查询</a></el-button>
+              <a href="http://zscx.osta.org.cn/">
+                <el-button class="zxzx pull-right" type="primary">成绩查询</el-button>
+              </a>
             </el-col>
             <img src="./images/education-ready-bg.png" class="img-responsive ready-bg-img">
           </el-row>

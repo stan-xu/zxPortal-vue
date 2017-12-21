@@ -20,12 +20,14 @@
           </div>
         </el-col>
         <el-col :span="4" :offset="8">
-          <el-button class="zxzx" type="primary"><a href="http://zxzx119.com/attachment/file/baoming.zip">报名资料包下载</a>
-          </el-button>
+          <a href="http://zxzx119.com/attachment/file/baoming.zip">
+            <el-button class="zxzx" type="primary">报名资料包下载</el-button>
+          </a>
         </el-col>
         <el-col :span="4">
-          <el-button class="zxzx pull-right" type="primary"><a href="http://zxzx119.com/attachment/file/baokao.docx">报考须知</a>
-          </el-button>
+          <a href="http://zxzx119.com/attachment/file/baokao.docx">
+            <el-button class="zxzx pull-right" type="primary">报考须知</el-button>
+          </a>
         </el-col>
       </el-row>
     </div>

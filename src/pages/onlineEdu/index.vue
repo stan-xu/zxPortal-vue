@@ -37,9 +37,6 @@
       font-size: 12px;
       margin-top: 40px;
       width: 138px;
-      a {
-        color: $white-max;
-      }
     }
     .education-title {
       padding-bottom: 32px;
