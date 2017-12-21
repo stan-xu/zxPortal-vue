@@ -2,14 +2,15 @@
   <div id="myHeader">
     <nav class="navbar navbar-static-top" :style="{'left':-scroll+'px'}">
       <div class="container">
-        <a class="navbar-brand" href="#"></a>
+        <a class="navbar-brand" :href="baseUrl+'/'"></a>
         <ul class="navbar-list">
           <li class="col" v-for="(item,index) in navlist" :key="index">
             <a :href="(item.url.startsWith('/'))?baseUrl+item.url:item.url" :class="{'selected':selected==index}">{{item.name}}</a>
           </li>
           <li class="col col-input">
             <form method="GET" :action="baseUrl+'/s'">
-              <el-input id="js-input-search" placeholder="搜索">
+              <input type="hidden" value="article" name="m">
+              <el-input id="js-input-search" placeholder="搜索" name="k">
                 <el-button id="js-btn-search" slot="append" icon="el-icon-search" native-type="submit"></el-button>
               </el-input>
             </form>
@@ -158,7 +159,8 @@
       margin: {
         left: 18px;
         right: 8px;
-      };
+      }
+    ;
       width: 200px;
     }
     .navbar-translate {
