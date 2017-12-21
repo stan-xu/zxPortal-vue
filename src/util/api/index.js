@@ -48,11 +48,7 @@ let apiAxios = (method, url, params, success, fail) => {
   }).then(
     res => {
       let response = res.data
-      if (!response.code) { // 分页接口不存在code
-        success(response)
-      } else if (response.code === 401) { // 后端约定未登录code=401
-        alert(response.message)
-      } else if (response.success === true) {
+      if (!response.errorCode) {
         if (success) { success(response) }
       } else {
         if (fail) { fail(response) } else { alert(`error:${response.message}`) }

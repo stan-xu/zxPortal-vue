@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/jpress': {
-        target:'http://www.zxzx119.com:8888',
+        target:'http://202.107.195.233:21009',
         secure:false,
         changeOrigin:true
       }
