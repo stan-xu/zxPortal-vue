@@ -2,8 +2,8 @@
   <div id="myCarousel" :style="{height:height+'px'}" @mouseenter="stop" @mouseleave="go">
     <transition-group name="component-fade" tag="ul" class="carousel-container">
       <li v-for="(item,index) in list" :key="index" v-show="index===currentIndex"
-          :style="{backgroundImage:'url('+item+')'}" class="carousel-item">
-        <a href="">
+          :style="{backgroundImage:'url('+item.img+')'}" class="carousel-item">
+        <a :href="item.link" v-if="item.link">
         </a>
       </li>
     </transition-group>

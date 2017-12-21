@@ -35,11 +35,27 @@
     },
     data: function () {
       return {
-        list: [require('./images/index-banner1.jpg'),
-          require('./images/index-banner2.jpg'),
-          require('./images/index-banner3.jpg'),
-          require('./images/index-banner4.jpg'),
-          require('./images/index-banner5.jpg')]
+        list: [
+          {
+            img: require('./images/index-banner1.jpg'),
+            link: ''
+          },
+          {
+            img: require('./images/index-banner2.jpg'),
+            link: '//www.zxzx119.com/20171110/1063.html'
+          },
+          {
+            img: require('./images/index-banner3.jpg'),
+            link: '//www.zxzx119.com/20171206/1135.html'
+          },
+          {
+            img: require('./images/index-banner4.jpg'),
+            link: '//android.myapp.com/myapp/detail.htm?apkName=com.zxzx119&amp;ADTAG=mobile'
+          },
+          {
+            img: require('./images/index-banner5.jpg'),
+            link: this.baseUrl + '/119'
+          }]
       }
     },
     mounted: function () {}
@@ -47,17 +63,5 @@
 </script>
 
 <style lang="scss" scoped>
-  .out {
-  }
 
-  #myIndex {
-    .el-carousel {
-      margin-top: 75px;
-      width: 100%;
-      img {
-        height: 100%;
-        max-width: 100%;
-      }
-    }
-  }
 </style>
