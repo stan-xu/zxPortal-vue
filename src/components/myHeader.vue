@@ -8,16 +8,16 @@
             <a :href="(item.url.startsWith('/'))?baseUrl+item.url:item.url" :class="{'selected':selected==index}">{{item.name}}</a>
           </li>
           <li class="col col-input">
-            <form method="GET" action="http://www.zxzx119.com/s">
+            <form method="GET" :action="baseUrl+'/s'">
               <el-input id="js-input-search" placeholder="搜索">
                 <el-button id="js-btn-search" slot="append" icon="el-icon-search" native-type="submit"></el-button>
               </el-input>
             </form>
           </li>
           <li class="col navbar-translate">
-            <span><a href="">En</a></span>
+            <span><a @click.prevent="setCookieLanguage('en')">En</a></span>
             <span>/</span>
-            <span><a href="">中</a></span>
+            <span><a @click.prevent="setCookieLanguage('zh-CN')">中</a></span>
           </li>
         </ul>
       </div>
@@ -71,7 +71,14 @@
     methods: {
       fixedScrollX () {
         this.scroll = document.documentElement.scrollLeft || document.body.scrollLeft
+      },
+      SetCookieLanguage (type) {
+        var d = new Date()
+        d.setHours(d.getHours() + (1)) // 保存一个小时
+        document.cookie = 'lang=' + type + '; expires=' + d.toGMTString()
+        window.location.reload()
       }
+
     },
     mounted: function () {
       window.addEventListener('scroll', this.fixedScrollX)
@@ -137,7 +144,7 @@
       & > a {
         display: block;
         height: 75px;
-        padding: 0 8px;
+        padding: 0 12px;
         color: #fff;
       }
       & > a:hover {
@@ -148,7 +155,10 @@
       background-color: #82051d;
     }
     .col-input {
-      margin: 0 7px;
+      margin: {
+        left: 18px;
+        right: 8px;
+      };
       width: 200px;
     }
     .navbar-translate {
