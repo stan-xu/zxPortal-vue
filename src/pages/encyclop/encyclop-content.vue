@@ -11,7 +11,7 @@
           <ul class="list v-table-cell" v-if="lists">
             <li v-for="item in lists" class="item">
               <a :href="item.link_to" class="item-title">{{item.title}}</a>
-              <span class="item-date">{{item.created.substring(0,11)}}</span>
+              <span class="item-date">{{item.created.substring(0, 11)}}</span>
             </li>
           </ul>
         </el-col>
@@ -20,7 +20,7 @@
           <ul class="list v-table-cell" v-if="newslists">
             <li v-for="item in newslists" class="item">
               <a :href="item.link_to" class="item-title">{{item.title}}</a>
-              <span class="item-date">{{item.created.substring(0,11)}}</span>
+              <span class="item-date">{{item.created.substring(0, 11)}}</span>
             </li>
           </ul>
         </el-col>
@@ -35,7 +35,7 @@
           <ul class="list v-table-cell" v-if="encylists">
             <li v-for="item in encylists" class="item">
               <a :href="item.link_to" class="item-title">{{item.title}}</a>
-              <span class="item-date">{{item.created.substring(0,11)}}</span>
+              <span class="item-date">{{item.created.substring(0, 11)}}</span>
             </li>
           </ul>
         </el-col>
@@ -101,7 +101,7 @@
       position: relative;
       padding: 0 50px;
       height: 318px;
-      a:hover{
+      a:hover {
         text-decoration: underline;
         color: $hot-dark;
       }
@@ -111,7 +111,6 @@
         right: 10px;
       }
       ul.list {
-        list-style: none;
         & > li.item {
           &:not(:last-child) {
             margin-bottom: 12px;
@@ -122,6 +121,7 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            vertical-align: top;
           }
           .item-date {
             display: inline-block;
