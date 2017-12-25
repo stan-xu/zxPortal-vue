@@ -59,7 +59,7 @@
 
 <script>
   export default {
-    name: 'encyclop-content',
+    name: 'knowall-content',
     data: function () {
       return {
         lists: '',
@@ -111,6 +111,7 @@
         right: 10px;
       }
       ul.list {
+        list-style: none;
         & > li.item {
           &:not(:last-child) {
             margin-bottom: 12px;
@@ -122,6 +123,18 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             vertical-align: top;
+            &:before{
+              content: '';
+              display: inline-block;
+              border-radius: 5px;
+              margin:{
+                right: 30px;
+                botton:1px;
+              };
+              width: 10px;
+              height: 10px;
+              background-color: $black-dark;
+            }
           }
           .item-date {
             display: inline-block;
