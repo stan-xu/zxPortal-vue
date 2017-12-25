@@ -21,7 +21,7 @@
       EncyclopMenu,
       EncyclopContent
     },
-    name: 'knowall'
+    name: 'encyclop'
   }
 </script>
 

@@ -16,7 +16,7 @@
 
 <script>
   export default {
-    name: 'knowall-menu',
+    name: 'encyclop-menu',
     data () {
       return {
         navlist: [
