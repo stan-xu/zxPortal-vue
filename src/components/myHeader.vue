@@ -39,7 +39,7 @@
             name: '企业名录'
           },
           {
-            url: '/article-knowall-1.html',
+            url: '/article-encyclop-1.html',
             name: '中消百科'
           },
           {
