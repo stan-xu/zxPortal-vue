@@ -101,6 +101,7 @@
       position: relative;
       padding: 0 50px;
       height: 318px;
+      background-color: #f7f6f5;
       a:hover {
         text-decoration: underline;
         color: $hot-dark;

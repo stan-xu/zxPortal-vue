@@ -52,8 +52,8 @@
     li {
       list-style: none;
     }
+
     ul li:first-child a:first-child {
-      padding-left: 255px;
     }
     .navbar {
       background-color: $hot-dark;
@@ -63,6 +63,7 @@
     }
     .navbar-list {
       overflow: hidden;
+      padding: 0 206px;
     }
     .col {
       float: left;
