@@ -1,5 +1,5 @@
 import util from '../../util/common'
 
-import Encyclop from './encyclop.vue'
+import Encyclop from './index.vue'
 
 util.initVue(Encyclop)

@@ -3,6 +3,7 @@
     <div class="container">
       <el-row>
         <nav class="navbar">
+          <a class="navbar-brand" :href="baseUrl+'/'"></a>
           <ul class="navbar-list">
             <li class="col" v-for="(item,index) in navlist" :key="index">
               <a :href="baseUrl+item.url">{{item.name}}</a>
@@ -48,12 +49,9 @@
 
 <style lang="scss">
   #encyclop-menu {
-    font-size: 14px;
+    font-size: 16px;
     li {
       list-style: none;
-    }
-
-    ul li:first-child a:first-child {
     }
     .navbar {
       background-color: $hot-dark;
@@ -61,9 +59,18 @@
       background-size: 100%;
       width: 100%;
     }
+    .navbar-brand {
+      float: left;
+      margin: -44px 0 0 15px;
+      width: 100px;
+      height: 85px;
+      background-image: url("./images/logo.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
     .navbar-list {
       overflow: hidden;
-      padding: 0 206px;
+     padding: 0 0 0 91px;
     }
     .col {
       float: left;
@@ -71,7 +78,7 @@
       & > a {
         display: block;
         height: 41px;
-        padding: 12px 49px 0 49px;
+        padding: 10px 49px 0 49px;
         color: #fff;
       }
       & > a:hover {
