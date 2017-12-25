@@ -44,7 +44,7 @@
             icon: require('./images/know-icon.png'),
             hoverIcon: require('./images/know-icon-hover.png'),
             hoverText: '传递政策法规<br>科普消防安全知识',
-            link: '/article-knowall-1.html'
+            link: '/article-encyclop-1.html'
           },
           {
             name: '紧急呼叫119',
