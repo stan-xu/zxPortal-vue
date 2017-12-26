@@ -94,6 +94,9 @@
 
 <style lang="scss">
   #encyclop-content {
+    img{
+      height: 318px;
+    }
     a:hover span {
       text-decoration: underline;
     }
