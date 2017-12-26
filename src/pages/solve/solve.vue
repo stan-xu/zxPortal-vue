@@ -194,9 +194,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 268px;
-    height: 202px;
-    line-height: 200px;
+    width: 276px;
+    height: 210px;
+    line-height: 210px;
     text-align: center;
     font-size: 18px;
     color: #fffefe;
@@ -211,7 +211,7 @@
   // .flip-container:hover .flipper{
   //     transform: rotateX(180deg) !important;
   // }
-  .flip-container:hover .back {
+  .flip-container:hover  .back {
     z-index: 3;
   }
 
@@ -242,7 +242,7 @@
 
   .front {
     img {
-      border: 2px solid $hot-dark;
+      border: 5px solid $hot-dark;
     }
 
     z-index: 2;
@@ -251,7 +251,8 @@
   .back {
     cursor: pointer;
     img{
-      border:2px solid transparent;
+      height: 210px;
+      width: 276px;
     }
     //transform: rotateX(-180deg);
   }
