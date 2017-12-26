@@ -5,11 +5,10 @@
         <a class="navbar-brand" :href="baseUrl+'/'"></a>
         <ul class="navbar-list">
           <li class="col" v-for="(item,index) in navlist" :key="index">
-            <a :href="(item.url.startsWith('/'))?baseUrl+item.url:item.url"
-               :class="{'selected':selected==index}">{{item.name}}</a>
+            <a :href="(item.url.startsWith('/'))?baseUrl+item.url:item.url" :class="{'selected':selected==index}">{{item.name}}</a>
           </li>
-          <li class="col col-input v-outter-table">
-            <form method="GET" :action="baseUrl+'/s'" class="v-table-cell">
+          <li class="col col-input">
+            <form method="GET" :action="baseUrl+'/s'">
               <input type="hidden" value="article" name="m">
               <el-input id="js-input-search" placeholder="搜索" name="k">
                 <el-button id="js-btn-search" slot="append" icon="el-icon-search" native-type="submit"></el-button>
@@ -36,6 +35,10 @@
         scroll: '',
         navlist: [
           {
+            url: '/',
+            name: '首页'
+          },
+          {
             url: 'http://d.zxzx119.com/',
             name: '企业名录'
           },
@@ -48,8 +51,8 @@
             name: '前沿技术'
           },
           {
-            url: '/article-savezx-1.html',
-            name: '中消救援'
+            url: '/article-onlineEdu-1.html',
+            name: '教育培训'
           },
           {
             url: 'http://www.zxzx119.com/119',
@@ -110,7 +113,6 @@
     .navbar-static-top {
       z-index: 1000;
       border-width: 0 0 1px;
-      line-height: 75px;
     }
     .navbar-img {
       padding-left: 20px;
@@ -130,12 +132,13 @@
     .col {
       //height: px;
       float: left;
+      line-height: 80px;
       text-align: center;
-      font-size: 18px;
+      font-size:18px;
       & > a {
         display: block;
         height: 75px;
-        padding: 0 25px;
+        padding: 0 18px;
         color: #fff;
       }
       & > a:hover {
@@ -146,18 +149,8 @@
       background-color: #82051d;
     }
     .col-input {
-      height: 75px;
-      .el-input-group {
-        display: table; //inline-table使元素产生5个额外空白像素
-        button {
-          margin: -13px -20px; // 解决IE中icon不剧中问题
-        }
-      }
-      form {
-        height: 45px;
-      }
       margin: {
-        left: 45px;
+        left:45px;
         right: 8px;
       }
     ;
