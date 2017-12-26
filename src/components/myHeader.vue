@@ -35,32 +35,24 @@
         scroll: '',
         navlist: [
           {
-            url: '/article-news-1.html',
-            name: '热点新闻'
-          },
-          {
-            url: '/article-wiki-1.html',
-            name: '政策法规'
-          },
-          {
-            url: '/article-knowall-1.html',
-            name: '消防百科'
+            url: '/',
+            name: '首页'
           },
           {
             url: 'http://d.zxzx119.com/',
             name: '企业名录'
           },
           {
-            url: '/article-onlineEdu-1.html',
-            name: '教育培训'
+            url: '/article-encyclop-1.html',
+            name: '中消百科'
           },
           {
             url: 'http://e.zxzx119.com/',
             name: '前沿技术'
           },
           {
-            url: '/article-savezx-1.html',
-            name: '中消救援'
+            url: '/article-onlineEdu-1.html',
+            name: '教育培训'
           },
           {
             url: 'http://www.zxzx119.com/119',
@@ -142,10 +134,11 @@
       float: left;
       line-height: 80px;
       text-align: center;
+      font-size:18px;
       & > a {
         display: block;
         height: 75px;
-        padding: 0 12px;
+        padding: 0 18px;
         color: #fff;
       }
       & > a:hover {
@@ -157,11 +150,11 @@
     }
     .col-input {
       margin: {
-        left: 18px;
+        left:45px;
         right: 8px;
       }
     ;
-      width: 200px;
+      width: 265px;
     }
     .navbar-translate {
       color: #fff;

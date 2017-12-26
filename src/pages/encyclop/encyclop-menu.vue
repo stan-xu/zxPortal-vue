@@ -1,14 +1,17 @@
 <template>
   <div id="encyclop-menu">
     <div class="container">
-      <el-row>
-        <nav class="navbar">
-          <ul class="navbar-list">
-            <li class="col" v-for="(item,index) in navlist" :key="index">
-              <a :href="baseUrl+item.url">{{item.name}}</a>
-            </li>
-          </ul>
-        </nav>
+      <el-row tag="ul" class="navbar">
+        <el-col :span="6" v-for="(item,index) in navlist" :key="index" tag="li">
+          <a :href="baseUrl+item.url">{{item.name}}</a>
+        </el-col>
+        <!--        <nav class="navbar">
+                  <ul class="navbar-list">
+                    <li class="col" v-for="(item,index) in navlist" :key="index">
+                      <a :href="baseUrl+item.url">{{item.name}}</a>
+                    </li>
+                  </ul>
+                </nav>-->
       </el-row>
     </div>
   </div>
@@ -20,10 +23,6 @@
     data () {
       return {
         navlist: [
-          {
-            url: '/',
-            name: '首页'
-          },
           {
             url: '/article-wiki-1.html',
             name: '政策法规'
@@ -48,34 +47,21 @@
 
 <style lang="scss">
   #encyclop-menu {
-    font-size: 14px;
-    li {
-      list-style: none;
-    }
-
-    ul li:first-child a:first-child {
-    }
-    .navbar {
+    font-size: 16px;
+    ul.navbar {
       background-color: $hot-dark;
-      height: 41px;
-      background-size: 100%;
-      width: 100%;
-    }
-    .navbar-list {
-      overflow: hidden;
-      padding: 0 206px;
-    }
-    .col {
-      float: left;
-      text-align: center;
-      & > a {
-        display: block;
-        height: 41px;
-        padding: 12px 49px 0 49px;
-        color: #fff;
-      }
-      & > a:hover {
-        color: #ddd;
+      height: 40px;
+      padding: 0 90px;
+      li {
+        text-align: center;
+        list-style: none;
+        line-height: 40px;
+        & > a {
+          color: $white-max;
+        }
+        & > a:hover {
+          color: #ddd;
+        }
       }
     }
   }
