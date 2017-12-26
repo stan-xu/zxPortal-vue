@@ -55,7 +55,7 @@
             name: '教育培训'
           },
           {
-            url: 'http://www.zxzx119.com/119',
+            url: '/119',
             name: '紧急呼叫119'
           }
         ]
