@@ -1,7 +1,7 @@
 <template>
   <div class="out">
     <div id="myIndex">
-      <my-header></my-header>
+      <my-header :selected="0"></my-header>
       <my-carousel :list="list" :height="450"></my-carousel>
       <module-introduction></module-introduction>
       <company-introduction></company-introduction>
