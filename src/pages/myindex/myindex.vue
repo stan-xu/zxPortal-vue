@@ -2,7 +2,8 @@
   <div class="out">
     <div id="myIndex">
       <my-header :selected="0"></my-header>
-      <my-carousel :list="list" :height="450"></my-carousel>
+    <!--  <my-carousel :list="list" :height="450"></my-carousel>-->
+      <carousel></carousel>
       <module-introduction></module-introduction>
       <company-introduction></company-introduction>
       <my-footer></my-footer>
@@ -21,10 +22,12 @@
   import MyCarousel from '../../components/myCarousel'
   import SlideNav from './slide-nav'
   import VideoPlayer from './video-player'
+  import Carousel from './carousel'
 
   export default {
     name: 'index',
     components: {
+      Carousel,
       VideoPlayer,
       SlideNav,
       MyCarousel,
@@ -63,5 +66,22 @@
 </script>
 
 <style lang="scss" scoped>
+.el-carousel{
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  .carousel-item {
+    position: absolute;
 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    a {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+    }
+  }
+}
 </style>
