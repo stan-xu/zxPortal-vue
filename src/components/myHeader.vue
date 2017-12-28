@@ -39,20 +39,20 @@
             name: '首页'
           },
           {
+            url: '/article-solve-1.html',
+            name: '解决方案'
+          },
+          {
             url: 'http://d.zxzx119.com/',
             name: '企业名录'
           },
           {
-            url: '/article-encyclop-1.html',
-            name: '中消百科'
-          },
-          {
-            url: 'http://e.zxzx119.com/',
-            name: '前沿技术'
-          },
-          {
             url: '/article-onlineEdu-1.html',
             name: '教育培训'
+          },
+          {
+            url: '/article-encyclop-1.html',
+            name: '中消百科'
           },
           {
             url: '/119',
