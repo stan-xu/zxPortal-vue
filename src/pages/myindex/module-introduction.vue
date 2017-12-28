@@ -6,8 +6,8 @@
           <div class="module-icon">
             <img :src="item.icon" alt="module-icon" class="icon">
             <div class="icon-hover">
-              <a :href="baseUrl+item.link"><img :src="item.hoverIcon" alt="" class="icon">
-                <div class="icon-hover-text center-block" :style="(index==1)?'margin-top:-31px':''"
+              <a :href="(item.link.startsWith('/'))?baseUrl+item.link:item.link"><img :src="item.hoverIcon" alt="" class="icon">
+                <div class="icon-hover-text center-block" :style="(index==1||index==2)?'margin-top:-31px':''"
                      v-html="item.hoverText"></div>
               </a>
             </div>
@@ -33,6 +33,13 @@
             link: '/article-solve-1.html'
           },
           {
+            name: '企业名录',
+            icon: require('./images/directory-cion.png'),
+            hoverIcon: require('./images/directory-icon-hover.png'),
+            hoverText: '百强房企用户首选的<br>消防信息服务平台<br>省心 · 省时 · 省力 · 省钱',
+            link: 'http://d.zxzx119.com/'
+          },
+          {
             name: '教育培训',
             icon: require('./images/edu-icon.png'),
             hoverIcon: require('./images/edu-icon-hover.png'),
@@ -45,13 +52,6 @@
             hoverIcon: require('./images/know-icon-hover.png'),
             hoverText: '传递政策法规<br>科普消防安全知识',
             link: '/article-encyclop-1.html'
-          },
-          {
-            name: '紧急呼叫119',
-            icon: require('./images/119-icon.png'),
-            hoverIcon: require('./images/119-icon-hover.png'),
-            hoverText: '消防急救实验<br>观察类真人秀节目',
-            link: '/119'
           }]
       }
     }
@@ -64,10 +64,10 @@
       height: 450px;
     }
     .module {
-      width: 15%;
+      width: 16%;
       float: left;
       &:not(:last-child) {
-        margin-right: 13%;
+        margin-right: 12%;
       }
       padding: 0;
       overflow: hidden;
@@ -97,12 +97,12 @@
         .icon-hover-text {
           width: 160px;
           color: #fff;
-          font-size: 16px;
+          font-size: 14px;
           text-align: center;
           position: absolute;
           top: 50%;
           left: 50%;
-          margin-left: -80px;
+          margin-left: -83px;
           margin-top: -20px;
           @media (max-width: 991px) {
             font-size: 12px;
