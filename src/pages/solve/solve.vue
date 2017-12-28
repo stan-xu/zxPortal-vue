@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <my-header></my-header>
+    <my-header :selected="1"></my-header>
     <div class="container solve">
       <h3>解决方案</h3>
       <h4>Expert technology</h4>
