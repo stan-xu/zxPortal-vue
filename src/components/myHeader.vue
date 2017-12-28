@@ -39,20 +39,20 @@
             name: '首页'
           },
           {
+            url: '/article-solve-1.html',
+            name: '解决方案'
+          },
+          {
             url: 'http://d.zxzx119.com/',
             name: '企业名录'
           },
           {
-            url: '/article-encyclop-1.html',
-            name: '中消百科'
-          },
-          {
-            url: 'http://e.zxzx119.com/',
-            name: '前沿技术'
-          },
-          {
             url: '/article-onlineEdu-1.html',
             name: '教育培训'
+          },
+          {
+            url: '/article-encyclop-1.html',
+            name: '中消百科'
           },
           {
             url: '/119',
@@ -95,8 +95,6 @@
       list-style: none;
     }
     .container {
-      padding-right: 15px;
-      padding-left: 15px;
       margin-right: auto;
       margin-left: auto;
     }
@@ -114,12 +112,9 @@
       z-index: 1000;
       border-width: 0 0 1px;
     }
-    .navbar-img {
-      padding-left: 20px;
-    }
     .navbar-brand {
       float: left;
-      margin: 10px 10px 0 0;
+      margin: 10px 35px 0 0;
       width: 100px;
       height: 85px;
       background-image: url("../images/logo.png");
@@ -138,7 +133,7 @@
       & > a {
         display: block;
         height: 75px;
-        padding: 0 18px;
+        padding: 0 25px;
         color: #fff;
       }
       & > a:hover {
@@ -160,14 +155,16 @@
         height: 45px;
       }
       margin: {
-        left: 45px;
+        left: 65px;
         right: 8px;
       }
     ;
-      width: 265px;
+      width: 175px;
     }
     .navbar-translate {
       color: #fff;
+      font-size: 14px;
+      line-height: 95px;
       a {
         color: #fff;
       }
