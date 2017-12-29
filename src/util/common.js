@@ -5,7 +5,8 @@ import '../style/index.scss'
 import '../style/base/element-variables.scss'
 import '../../static/css/font-awesome.min.css'
 import Vue from 'vue'
-const initVue = function (Index) {
+
+const initVue = function (Index, router) {
   Vue.config.productionTip = false
   Vue.prototype.$api = API
   Vue.prototype.baseUrl = API.root
@@ -14,6 +15,7 @@ const initVue = function (Index) {
   new Vue({
     el: '#app',
     template: '<Index/>',
+    router: router,
     components: {
       Index
     }

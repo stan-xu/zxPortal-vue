@@ -3,7 +3,7 @@
     <div class="container">
       <el-row tag="ul" class="navbar">
         <el-col :span="6" v-for="(item,index) in navlist" :key="index" tag="li">
-          <a :href="baseUrl+item.url">{{item.name}}</a>
+          <router-link :to="item.url">{{item.name}}</router-link>
         </el-col>
         <!--        <nav class="navbar">
                   <ul class="navbar-list">
@@ -24,19 +24,19 @@
       return {
         navlist: [
           {
-            url: '/article-wiki-1.html',
+            url: '/rule',
             name: '政策法规'
           },
           {
-            url: '/article-news-1.html',
+            url: '/waterfall/5',
             name: '热点新闻'
           },
           {
-            url: '/article-knowall-1.html',
+            url: '/waterfall/14',
             name: '消防百科'
           },
           {
-            url: '/article-savezx-1.html',
+            url: '/save',
             name: '中消救援'
           }
         ]
