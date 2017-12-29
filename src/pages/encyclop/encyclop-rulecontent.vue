@@ -90,6 +90,7 @@
 
 <style lang="scss">
   #encyclop-rulecontent {
+    background-color: #f7f6f5;
     h1{
       font-size: 21px;
       font-weight: bolder;
