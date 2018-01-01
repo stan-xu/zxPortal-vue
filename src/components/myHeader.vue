@@ -109,7 +109,7 @@
       width: 100%;
     }
     .navbar-static-top {
-      z-index: 1000;
+      z-index: 99999;
       border-width: 0 0 1px;
     }
     .navbar-brand {

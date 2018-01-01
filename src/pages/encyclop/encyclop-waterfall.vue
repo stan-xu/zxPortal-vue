@@ -1,11 +1,16 @@
 <template>
   <div id="encyclop-waterfall" class="container">
-    <el-row :gutter="20">
+    <el-row :gutter="20" v-loading="isLoading" class="grid-container">
       <el-col :span="6" tag="ul" v-for="(ul,index) in ulList" ref="ul" :id="'ul'+index" class="grid"
               :key="index">
-        <li v-for="item in ulList[index]" class="grid-item" >
-          <img :src="item.thumbnail" alt="" v-if="item.style!=='min'" class="img-responsive center-block">
-          <div>{{item.title}}</div>
+        <li v-for="item in ulList[index]" class="grid-item">
+          <a :href="item.link_to">
+            <img :src="item.thumbnail" alt="" v-if="item.style!=='min'" class="img-responsive center-block">
+            <div class="grid-info">
+              <h3 :href="item.link_to" class="grid-title">{{item.title}}</h3>
+              {{item.title}}
+            </div>
+          </a>
         </li>
       </el-col>
     </el-row>
@@ -18,45 +23,46 @@
     data: function () {
       return {
         baseList: [],
-        ulList: [[], [], [], []]
+        page: 0,
+        ulList: [[], [], [], []],
+        isLoading: false
       }
     },
     mounted: function () {
       this.getItems(this.$route.params.id)
+      window.addEventListener('scroll', () => {
+        let scrollTop = document.documentElement.scrollTop
+        let windowHeight = window.innerHeight
+        let elOffsetHeight = document.getElementById('encyclop-waterfall').offsetHeight
+        if (scrollTop + windowHeight > elOffsetHeight) {
+          if (this.isLoading === false) {
+            this.getItems()
+          }
+        }
+      })
     },
     methods: {
+      /* 获取数据 */
       getItems: function (id) {
-        this.$api.get('/api', {method: 'querywaterfall', page: 1, pagesize: 50, taxonomyid: id}, (r) => {
+        this.isLoading = true
+        this.page++
+        this.$api.get('/api', {method: 'querywaterfall', page: this.page, pagesize: 50, taxonomyid: id}, (r) => {
           this.baseList = r.data.list
-          this.ulList[0].push(this.baseList.shift())
-          this.ulList[1].push(this.baseList.shift())
-          this.ulList[2].push(this.baseList.shift())
-          this.ulList[3].push(this.baseList.shift())
-          this.updateWaterfall()
-          /* baseList.map((value, index) => {
-            if (index < 4) {
-              this.ulList[index].push(value)
-            } else {
-              let heightList = document.querySelectorAll('#ul0')[0].offsetHeight
-              let heightList1 = document.querySelectorAll('#ul1')[0].offsetHeight
-              let heightList2 = document.querySelectorAll('#ul2')[0].offsetHeight
-              let heightList3 = document.querySelectorAll('#ul3')[0].offsetHeight
-              console.log(heightList)
-              console.log(heightList1)
-              console.log(heightList2)
-              console.log(heightList3)
-              // let pushIndex = heightList.indexOf(Math.min(...heightList))
-              // this.ulList[pushIndex].push(value)
-            }
-          }) */
+          setTimeout(() => {
+            this.ulList.map(value => {
+              value.push(this.baseList.shift())
+            })// 初始化前四条数据获取以获取高度
+            this.isLoading = false
+            this.updateWaterfall()
+          }, 500)// 添加loading延迟0.5s
         })
       },
+      /* 更新瀑布流列表 */
       updateWaterfall () {
         let heightList = this.$refs.ul.map(value => {
           return value.$el.offsetHeight
         })
-        let index = heightList.indexOf(Math.min(...heightList))
-        console.log(heightList)
+        let index = heightList.indexOf(Math.min(...heightList))// 最矮一列下标
         let item = this.baseList.shift()
         if (item == null) {
           return
@@ -65,19 +71,50 @@
         }
         this.$nextTick(function () {
           this.updateWaterfall()
-        })
+        })// 视图更新后执行
+      }
+    },
+    watch: {
+      /* 不改变路由仅改id时重新加载 */
+      $route: function () {
+        this.ulList = [[], [], [], []]
+        this.page = 0
+        this.getItems(this.$route.params.id)
       }
     }
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   #encyclop-waterfall {
-    background-color: #f7f6f5;
+    .grid-container{
+      min-height: 660px;
+    }
+    .el-loading-spinner{
+      position: fixed;
+      margin-left: -21px;
+      left: 50%;
+      text-align: left;
+    }
     ul.grid {
       list-style: none;
+      img{
+        width: 275px;
+      }
       li.grid-item {
-        border: 1px solid #000;
+        margin: 20px 0;
+        box-shadow: 1px 1px 10px #333;
+        background-color: #f5f5f5;
+        .grid-info {
+          padding: 10px;
+          font-size: 14px;
+          min-height: 140px;
+          h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+        }
       }
     }
   }
