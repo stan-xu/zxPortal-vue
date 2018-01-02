@@ -65,7 +65,7 @@
       fixedScrollX () {
         this.scroll = document.documentElement.scrollLeft || document.body.scrollLeft
       },
-      SetCookieLanguage (type) {
+      setCookieLanguage (type) {
         var d = new Date()
         d.setHours(d.getHours() + (1)) // 保存一个小时
         document.cookie = 'lang=' + type + '; expires=' + d.toGMTString()
