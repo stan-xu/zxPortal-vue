@@ -8,13 +8,13 @@
               <el-col :span="6" class="item-title">
                 <div class="block-hot"><h1>国家政策</h1></div>
               </el-col>
-             <a :href="baseUrl+navlist.countryurl" class="item-more">更多>></a>
+             <a :href="baseUrl+navlist.countryurl" class="item-more" target="_blank">更多>></a>
             </el-row>
           </div>
           <div class="itemlist">
             <ul class="list"  v-if="lists">
               <li v-for="item in lists">
-                <a :href="item.link_to" class="item-title">{{item.title}}</a>
+                <a :href="item.link_to" class="item-title" target="_blank">{{item.title}}</a>
               </li>
             </ul>
           </div>
@@ -23,13 +23,13 @@
               <el-col :span="6" class="item-title">
                 <div class="block-hot"><h1>地方法规</h1></div>
               </el-col>
-              <a :href="baseUrl+navlist.rulesurl" class="item-more">更多>></a>
+              <a :href="baseUrl+navlist.rulesurl" class="item-more" target="_blank">更多>></a>
             </el-row>
           </div>
           <div class="itemlist">
             <ul class="list"  v-if="rules">
               <li v-for="item in rules">
-                <a :href="item.link_to" class="item-title">{{item.title}}</a>
+                <a :href="item.link_to" class="item-title" target="_blank">{{item.title}}</a>
               </li>
             </ul>
           </div>
@@ -40,7 +40,7 @@
           </div>
           <div v-if="news" class="news">
             <div v-for="item in news">
-              <a :href="item.link_to"><h2>{{item.title}}</h2></a>
+              <a :href="item.link_to" target="_blank"><h2>{{item.title}}</h2></a>
               <img :src="item.thumbnail" class="img-responsive"/>
             </div>
           </div>
@@ -134,7 +134,7 @@
       padding-left:10px;
       margin-top: 3px;
       .news{
-        margin:40px 0 55px 0;
+        min-height: 323px;
       }
     }
     a:hover {
