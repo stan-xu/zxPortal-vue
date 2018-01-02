@@ -10,7 +10,7 @@
           <router-link :to="navlist.ruleurl" class="text-more">更多>></router-link>
           <ul class="list v-table-cell" v-if="lists">
             <li v-for="item in lists" class="item">
-              <a :href="item.link_to" class="item-title">{{item.title}}</a>
+              <a :href="item.link_to" class="item-title" target="_blank">{{item.title}}</a>
               <span class="item-date">{{item.created.substring(0, 11)}}</span>
             </li>
           </ul>
@@ -18,27 +18,27 @@
       </el-row>
       <el-row>
         <el-col :span="12" class="v-outter-table content">
-          <a :href="baseUrl+ navlist.newsurl" class="text-more">更多>></a>
+          <router-link :to="navlist.newsurl" class="text-more">更多>></router-link>
           <ul class="list v-table-cell" v-if="newslists">
             <li v-for="item in newslists" class="item">
-              <a :href="item.link_to" class="item-title">{{item.title}}</a>
+              <a :href="item.link_to" class="item-title" target="_blank">{{item.title}}</a>
               <span class="item-date">{{item.created.substring(0, 11)}}</span>
             </li>
           </ul>
         </el-col>
         <el-col :span="12">
-          <a :href="baseUrl+ navlist.newsurl"><img src="./images/news.jpg" class="img-responsive center-block"></a>
+          <router-link :to="navlist.newsurl"><img src="./images/news.jpg" class="img-responsive center-block"></router-link>
         </el-col>
       </el-row>
       <el-row>
         <el-col :span="12">
-          <a :href="baseUrl+ navlist.encyurl"><img src="./images/ency.jpg" class="img-responsive center-block"></a>
+          <router-link :to="navlist.encyurl"><img src="./images/ency.jpg" class="img-responsive center-block"></router-link>
         </el-col>
         <el-col :span="12" class="v-outter-table content">
-          <a :href="baseUrl+ navlist.encyurl" class="text-more">更多>></a>
+          <router-link :to="navlist.encyurl" class="text-more">更多>></router-link>
           <ul class="list v-table-cell" v-if="encylists">
             <li v-for="item in encylists" class="item">
-              <a :href="item.link_to" class="item-title">{{item.title}}</a>
+              <a :href="item.link_to" class="item-title" target="_blank">{{item.title}}</a>
               <span class="item-date">{{item.created.substring(0, 11)}}</span>
             </li>
           </ul>
@@ -76,8 +76,8 @@
         encylists: '',
         navlist: {
           ruleurl: '/rule',
-          newsurl: '/article-news-1.html',
-          encyurl: '/article-knowall-1.html',
+          newsurl: '/waterfall/5',
+          encyurl: '/waterfall/14',
           helpurl: '/save'
         }
       }
