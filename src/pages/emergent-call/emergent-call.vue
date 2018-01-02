@@ -1,7 +1,7 @@
 <template>
   <div id="call">
     <my-header :selected="5"></my-header>
-   <img src="./images/banner-bg.jpg" class="img-responsive center-block banner">
+    <img src="./images/banner-bg.jpg" class="img-responsive center-block banner">
     <call-content></call-content>
     <my-footer></my-footer>
   </div>
@@ -10,7 +10,7 @@
 <script>
   import MyHeader from '../../components/myHeader'
   import MyFooter from '../../components/myFooter'
-  import CallContent from './call-content'
+  import CallContent from './emergent-call-content'
 
   export default {
     components: {
