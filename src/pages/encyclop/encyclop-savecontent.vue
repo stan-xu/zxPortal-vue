@@ -95,7 +95,9 @@
 
 <style lang="scss">
   #encyclop-savecontent {
-    background-color: #f7f6f5;
+    &>.container{
+      background-color: #f7f6f5;
+    }
     .item{
       position: relative;
       padding: 0 10px;

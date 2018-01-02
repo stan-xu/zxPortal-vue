@@ -49,7 +49,10 @@
 
 <style lang="scss">
   #encyclop-rulecontent {
-    background-color: #f7f6f5;
+    &>.container{
+      background-color: #f7f6f5;
+      padding: 0 10px;
+    }
     h1{
       font-size: 21px;
       font-weight: bolder;

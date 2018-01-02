@@ -1,36 +1,36 @@
 <template>
-  <div id="encyclop-rule-index">
-    <div class="bottom-line-black">
-      <el-row>
-        <el-col :span="6" class="item-title">
-          <div class="block-hot"><h1>国家政策</h1></div>
-        </el-col>
-        <router-link :to="navlist.countryurl" class="item-more" target="_blank">更多>></router-link>
-      </el-row>
+    <div id="encyclop-rule-index">
+      <div class="bottom-line-black">
+        <el-row>
+          <el-col :span="6" class="item-title">
+            <div class="block-hot"><h1>国家政策</h1></div>
+          </el-col>
+          <router-link :to="navlist.countryurl" class="item-more" target="_blank">更多>></router-link>
+        </el-row>
+      </div>
+      <div class="itemlist">
+        <ul class="list" v-if="lists">
+          <li v-for="item in lists">
+            <a :href="item.link_to" class="item-title" target="_blank">{{item.title}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom-line-black">
+        <el-row>
+          <el-col :span="6" class="item-title">
+            <div class="block-hot"><h1>地方法规</h1></div>
+          </el-col>
+          <router-link :to="navlist.rulesurl" class="item-more" target="_blank">更多>></router-link>
+        </el-row>
+      </div>
+      <div class="itemlist">
+        <ul class="list" v-if="rules">
+          <li v-for="item in rules">
+            <a :href="item.link_to" class="item-title" target="_blank">{{item.title}}</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="itemlist">
-      <ul class="list" v-if="lists">
-        <li v-for="item in lists">
-          <a :href="item.link_to" class="item-title" target="_blank">{{item.title}}</a>
-        </li>
-      </ul>
-    </div>
-    <div class="bottom-line-black">
-      <el-row>
-        <el-col :span="6" class="item-title">
-          <div class="block-hot"><h1>地方法规</h1></div>
-        </el-col>
-        <router-link :to="navlist.rulesurl" class="item-more" target="_blank">更多>></router-link>
-      </el-row>
-    </div>
-    <div class="itemlist">
-      <ul class="list" v-if="rules">
-        <li v-for="item in rules">
-          <a :href="item.link_to" class="item-title" target="_blank">{{item.title}}</a>
-        </li>
-      </ul>
-    </div>
-  </div>
 </template>
 
 <script>
