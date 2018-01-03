@@ -65,7 +65,7 @@
       fixedScrollX () {
         this.scroll = document.documentElement.scrollLeft || document.body.scrollLeft
       },
-      SetCookieLanguage (type) {
+      setCookieLanguage (type) {
         var d = new Date()
         d.setHours(d.getHours() + (1)) // 保存一个小时
         document.cookie = 'lang=' + type + '; expires=' + d.toGMTString()
@@ -109,7 +109,7 @@
       width: 100%;
     }
     .navbar-static-top {
-      z-index: 1000;
+      z-index: 99999;
       border-width: 0 0 1px;
     }
     .navbar-brand {
