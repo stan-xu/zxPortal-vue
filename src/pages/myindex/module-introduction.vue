@@ -61,7 +61,7 @@
 <style lang="scss">
   #module-introduction {
     .v-outter-table {
-      height: 450px;
+      height: 335px;
     }
     .module {
       width: 16%;

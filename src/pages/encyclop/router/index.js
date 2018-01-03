@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '../encyclop-content'
 import Rule from '../encyclop-rulecontent'
+import RuleMore from '../encyclop-rule-more'
+import RuleIndex from '../encyclop-rule-index'
 import Save from '../encyclop-savecontent'
 import WaterFall from '../encyclop-waterfall'
 
@@ -15,7 +17,17 @@ export default new Router({
     },
     {
       path: '/rule',
-      component: Rule
+      component: Rule,
+      children: [
+        {
+          path: '/',
+          component: RuleIndex
+        },
+        {
+          path: '/more/:id',
+          component: RuleMore
+        }
+      ]
     },
     {
       path: '/save',
