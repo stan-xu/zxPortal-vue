@@ -15,7 +15,6 @@
       <div class="block">
         <el-pagination
           background
-          @size-change="handleSizeChange"
           @current-change="handleCurrentChange"
           :current-page="currentPage"
           :page-size="pagesize"
@@ -41,12 +40,10 @@
       this.get_data(this.$route.params.id)
     },
     methods: {
-      handleSizeChange: function (size) {
-        this.pagesize = size
-      },
       handleCurrentChange: function (currentPage) {
         this.currentPage = currentPage
         this.get_data(this.$route.params.id)
+        window.scrollTo(0, 350)
       },
       get_data: function (id) {
         this.$api.get('/api', {method: 'querywaterfall', page: this.currentPage, pagesize: 10, taxonomyid: id}, (r) => {

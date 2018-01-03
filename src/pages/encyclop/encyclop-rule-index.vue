@@ -5,7 +5,7 @@
           <el-col :span="6" class="item-title">
             <div class="block-hot"><h1>国家政策</h1></div>
           </el-col>
-          <router-link :to="navlist.countryurl" class="item-more" target="_blank">更多>></router-link>
+          <router-link :to="navlist.countryurl" class="item-more">更多>></router-link>
         </el-row>
       </div>
       <div class="itemlist">
@@ -20,7 +20,7 @@
           <el-col :span="6" class="item-title">
             <div class="block-hot"><h1>地方法规</h1></div>
           </el-col>
-          <router-link :to="navlist.rulesurl" class="item-more" target="_blank">更多>></router-link>
+          <router-link :to="navlist.rulesurl" class="item-more">更多>></router-link>
         </el-row>
       </div>
       <div class="itemlist">
