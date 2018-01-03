@@ -1,8 +1,8 @@
 <template>
   <div id="encyclop-rule-more">
     <div class="itemlist">
-      <h2 v-if="this.$route.params.id=='13'">国家政策法规</h2>
-      <h2 v-if="this.$route.params.id=='12'">地方规章制度</h2>
+      <h2 v-if="this.$route.params.id=='12'">国家政策法规</h2>
+      <h2 v-if="this.$route.params.id=='13'">地方规章制度</h2>
       <ul class="list" v-if="lists">
         <li v-for="item in lists.list">
           <a :href="item.link_to" class="item-title" target="_blank">
