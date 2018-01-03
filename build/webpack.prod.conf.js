@@ -14,9 +14,19 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const env = require('../config/prod.env')
 
 var htmls = glob.sync('./src/pages/**/*.html').map(function (item) { //自动生成htmlWebpackPlugin多页面配置
+  let fileName = item.substring(item.lastIndexOf('/')+1)
+  switch(fileName){
+    case 'myindex.html':
+      fileName = 'index.html'
+      break
+    case 'emergent-call.html':
+      break
+    default:
+      fileName = './taxonomy_article_'+ fileName
+  }
   return new HtmlWebpackPlugin({
     favicon: path.resolve(__dirname, '../src/images/favicon.ico'),
-    filename: './taxonomy_article_' + item.substring(item.lastIndexOf('/')+1),
+    filename: fileName,
     template: item,
     inject: true,
     chunks: ['manifest', 'vendor',item.slice(12, -5)],
