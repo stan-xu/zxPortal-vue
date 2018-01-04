@@ -12,7 +12,7 @@
           <div v-if="news" class="news">
             <div v-for="item in news">
               <a :href="item.link_to" target="_blank"><h2>{{item.title}}</h2></a>
-              <img :src="item.thumbnail" class="img-responsive"/>
+              <img :src="item.thumbnail" class="img-responsive" v-if="item.style!=='min'"/>
             </div>
           </div>
           <div class="bottom-line-black">
