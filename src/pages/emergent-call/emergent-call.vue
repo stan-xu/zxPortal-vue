@@ -1,6 +1,6 @@
 <template>
   <div id="call">
-    <my-header :selected="5"></my-header>
+    <my-header :selected="6"></my-header>
     <img src="./images/banner-bg.jpg" class="img-responsive center-block banner">
     <call-content></call-content>
     <my-footer></my-footer>

@@ -7,7 +7,7 @@
           <el-row class="link-text">
             <el-col :span="12">
               <a href="http://www.gov.cn/">国务院</a>
-              <a href="http://www.mps.gov.cn/" style="margin-left: 50px">公安部</a>
+              <a href="http://www.mps.gov.cn/" class="link-text-left">公安部</a>
             </el-col>
             <el-col :span="12"><a href="http://www.119.gov.cn/xiaofang/">公安部消防局</a></el-col>
           </el-row>
@@ -69,6 +69,9 @@
     font-size: 16px;
     .link-text {
       padding-top: 22px;
+      .link-text-left{
+        margin-left: 43px;
+      }
     }
     .tel-line {
       margin-top: 30px;
