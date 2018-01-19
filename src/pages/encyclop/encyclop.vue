@@ -1,6 +1,6 @@
 <template>
   <div id="encyclop">
-    <my-header :selected="4"></my-header>
+    <my-header :selected="5"></my-header>
     <div class="container">
       <router-link to="/"><img src="./images/en-banner.jpg" class="img-responsive center-block banner"></router-link>
     </div>

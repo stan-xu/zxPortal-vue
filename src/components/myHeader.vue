@@ -51,6 +51,10 @@
             name: '教育培训'
           },
           {
+            url: 'http://e.zxzx119.com/',
+            name: '第三方审图'
+          },
+          {
             url: '/article-encyclop-1.html',
             name: '中消百科'
           },
@@ -133,7 +137,7 @@
       & > a {
         display: block;
         height: 75px;
-        padding: 0 25px;
+        padding: 0 15px;
         color: #fff;
       }
       & > a:hover {
