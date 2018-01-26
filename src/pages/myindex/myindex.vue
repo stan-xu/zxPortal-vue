@@ -41,7 +41,7 @@
         list: [
           {
             img: require('./images/index-banner1.jpg'),
-            link: ''
+            link: '//d.zxzx119.com/account/register'
           },
           {
             img: require('./images/index-banner2.jpg'),
