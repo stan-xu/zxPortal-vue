@@ -38,7 +38,7 @@
         list: [
           {
             img: require('./images/index-banner1.jpg'),
-            link: '//d.zxzx119.com/account/register'
+            link: '//d.zxzx119.com/register'
           },
           {
             img: require('./images/index-banner2.jpg'),
