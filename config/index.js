@@ -11,8 +11,8 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/jpress': {
-        target:'http://202.107.195.233:21009',
+      '/': {
+        target:'http://jpress.dev.hzjuxiu.com:21009/',
         secure:false,
         changeOrigin:true
       }
