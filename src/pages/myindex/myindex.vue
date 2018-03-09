@@ -42,7 +42,7 @@
           },
           {
             img: require('./images/index-banner2.jpg'),
-            link: '//www.zxzx119.com/20171110/1063.html'
+            link: '/article-expert-1.html'
           },
           {
             img: require('./images/index-banner3.jpg'),
