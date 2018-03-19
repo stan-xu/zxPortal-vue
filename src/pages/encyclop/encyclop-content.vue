@@ -6,9 +6,9 @@
           <router-link :to="navlist.ruleurl">
             <img src="./images/rule1.jpg" class="img-responsive center-block"></router-link>
         </el-col>
-        <el-col :span="12" class="v-outter-table content">
+        <el-col :span="12" class="content">
           <router-link :to="navlist.ruleurl" class="text-more">更多>></router-link>
-          <ul class="list v-table-cell" v-if="lists">
+          <ul class="list" v-if="lists">
             <li v-for="item in lists" class="item">
               <a :href="item.link_to" class="item-title" target="_blank">{{item.title}}</a>
               <span class="item-date">{{item.created.substring(0, 11)}}</span>
@@ -17,9 +17,9 @@
         </el-col>
       </el-row>
       <el-row>
-        <el-col :span="12" class="v-outter-table content">
+        <el-col :span="12" class="content">
           <router-link :to="navlist.newsurl" class="text-more">更多>></router-link>
-          <ul class="list v-table-cell" v-if="newslists">
+          <ul class="list" v-if="newslists">
             <li v-for="item in newslists" class="item">
               <a :href="item.link_to" class="item-title" target="_blank">{{item.title}}</a>
               <span class="item-date">{{item.created.substring(0, 11)}}</span>
@@ -34,9 +34,9 @@
         <el-col :span="12">
           <router-link :to="navlist.encyurl"><img src="./images/ency.jpg" class="img-responsive center-block"></router-link>
         </el-col>
-        <el-col :span="12" class="v-outter-table content">
+        <el-col :span="12" class="content">
           <router-link :to="navlist.encyurl" class="text-more">更多>></router-link>
-          <ul class="list v-table-cell" v-if="encylists">
+          <ul class="list" v-if="encylists">
             <li v-for="item in encylists" class="item">
               <a :href="item.link_to" class="item-title" target="_blank">{{item.title}}</a>
               <span class="item-date">{{item.created.substring(0, 11)}}</span>
@@ -45,16 +45,14 @@
         </el-col>
       </el-row>
       <el-row>
-        <el-col :span="12" class="v-outter-table content">
-          <div class="v-table-cell">
-            <h2>
-              <router-link :to="navlist.helpurl">中消救援</router-link>
-            </h2>
-            <div class="list">
-              <p>
-                中消救援以服务社会、服务大众为宗旨，联结全国多支专业紧急救援队，涵盖生命救援、人道救助、灾害预防、应急反应、灾后恢复和减灾等各个领域。收集并反映有关紧急救援信息和情况，配合有关重大紧急救援事项的处置以及国内国际紧急救援事业的合作与交流等。通过协调救援资源，研究救援产业，促进中国紧急救援体系及相关产业的建设。依靠整合国内外救援技术、资讯及相关服务，促进中国紧急救援事业产业化、市场化、国际化。
-              </p>
-            </div>
+        <el-col :span="12" class="content">
+          <h2>
+            <router-link :to="navlist.helpurl">中消救援</router-link>
+          </h2>
+          <div class="list">
+            <p>
+              中消救援以服务社会、服务大众为宗旨，联结全国多支专业紧急救援队，涵盖生命救援、人道救助、灾害预防、应急反应、灾后恢复和减灾等各个领域。收集并反映有关紧急救援信息和情况，配合有关重大紧急救援事项的处置以及国内国际紧急救援事业的合作与交流等。通过协调救援资源，研究救援产业，促进中国紧急救援体系及相关产业的建设。依靠整合国内外救援技术、资讯及相关服务，促进中国紧急救援事业产业化、市场化、国际化。
+            </p>
           </div>
         </el-col>
         <el-col :span="12">
@@ -111,7 +109,7 @@
     }
     .content {
       position: relative;
-      padding: 0 50px;
+      padding: 45px;
       height: 318px;
       background-color: #f7f6f5;
       a:hover {
