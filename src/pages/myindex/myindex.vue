@@ -38,7 +38,7 @@
         list: [
           {
             img: require('./images/index-banner1.jpg'),
-            link: '//d.zxzx119.com/register'
+            link: '//d.zxzx119.com/'
           },
           {
             img: require('./images/index-banner2.jpg'),
@@ -46,11 +46,11 @@
           },
           {
             img: require('./images/index-banner3.jpg'),
-            link: '//www.zxzx119.com/20171206/1135.html'
+            link: ''
           },
           {
             img: require('./images/index-banner4.jpg'),
-            link: '//android.myapp.com/myapp/detail.htm?apkName=com.zxzx119&amp;ADTAG=mobile'
+            link: ''
           },
           {
             img: require('./images/index-banner5.jpg'),
