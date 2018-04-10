@@ -47,7 +47,7 @@
             name: '企业名录'
           },
           {
-            url: '/article-onlineEdu-1.html',
+            url: '//app.zxzx119.com/',
             name: '教育培训'
           },
           {
