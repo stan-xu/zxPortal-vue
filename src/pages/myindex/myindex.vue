@@ -37,8 +37,8 @@
       return {
         list: [
           {
-            img: require('./images/index-banner1.jpg'),
-            link: '//d.zxzx119.com/'
+            img: require('./images/index-banner4.jpg'),
+            link: '//app.zxzx119.com'
           },
           {
             img: require('./images/index-banner2.jpg'),
@@ -49,8 +49,8 @@
             link: ''
           },
           {
-            img: require('./images/index-banner4.jpg'),
-            link: ''
+            img: require('./images/index-banner1.jpg'),
+            link: '//d.zxzx119.com/'
           },
           {
             img: require('./images/index-banner5.jpg'),
