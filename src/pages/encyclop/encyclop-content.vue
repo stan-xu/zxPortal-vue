@@ -87,6 +87,7 @@
       get_data: function () {
         this.$api.get('/api', {method: 'querywaterfall', page: 1, pagesize: 7, taxonomyid: 11}, (r) => {
           this.lists = r.data.list
+          //console.log(this.lists)
         })
         this.$api.get('/api', {method: 'querywaterfall', page: 1, pagesize: 7, taxonomyid: 5}, (r) => {
           this.newslists = r.data.list
@@ -101,6 +102,18 @@
 
 <style lang="scss">
   #encyclop-content {
+    .navList-ul li{width: 75px;float: left;text-align: center;cursor: pointer;}
+    .moreMuch{color: #cc0033;}
+    li.listLeft{border-bottom: 2px solid #aaaaaa;height: 180px;
+      img{display: block;margin-top: 40px;}
+      .img-responsive{border:1px solid #120a0c;padding: 5px;border-radius: 3px; display: table-cell;
+        vertical-align: middle;
+      }
+      .newContent{font-size: 14px;line-height: 20px;height: 100px;overflow: hidden;margin: 0;padding: 0;}
+      .item-title{font-size: 20px;line-height: 50px;}
+      .item-title:hover{color: #cc0033;text-decoration: underline;}
+      .keyWord,.item-date{color: #cc0033;}
+    }
     img {
       height: 318px;
     }

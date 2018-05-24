@@ -1,6 +1,13 @@
 <template>
   <div id="myCarousel" :style="{height:height+'px'}" @mouseenter="stop" @mouseleave="go">
-    <transition-group name="component-fade" tag="ul" class="carousel-container">
+    <el-carousel interval="3000" height="450px" name="component-fade" tag="ul" class="carousel-container" indicator-position="none">
+      <el-carousel-item v-for="(item,index) in list" :key="index" v-show="index===currentIndex"
+                        :style="{backgroundImage:'url('+item.img+')'}" class="carousel-item">
+        <a :href="item.link" v-if="item.link">
+        </a>
+      </el-carousel-item>
+    </el-carousel>
+    <!-- <transition-group name="component-fade" tag="ul" class="carousel-container">
       <li v-for="(item,index) in list" :key="index" v-show="index===currentIndex"
           :style="{backgroundImage:'url('+item.img+')'}" class="carousel-item">
         <a :href="item.link" v-if="item.link">
@@ -14,7 +21,7 @@
       </div>
     </div>
     <a class="left carousel-control" @click.prevent="prev"><span class="fa fa-angle-left"></span></a>
-    <a class="right carousel-control" @click.prevent="next"><span class="fa fa-angle-right"></span></a>
+    <a class="right carousel-control" @click.prevent="next"><span class="fa fa-angle-right"></span></a>-->
   </div>
 </template>
 
@@ -28,24 +35,13 @@
         timer: null
       }
     },
-    mounted: function () {
-      this.$nextTick(() => {
-        this.timer = setInterval(() => {
-          this.autoPlay()
-        }, 5000)
-      })
-    },
     methods: {
-      go () {
-        this.timer = setInterval(() => {
-          this.autoPlay()
-        }, 5000)
-      },
       change (index) {
         this.currentIndex = index
       },
       autoPlay () {
         this.currentIndex++
+        // this.offsetLeft
         if (this.currentIndex > this.list.length - 1) {
           this.currentIndex = 0
         }
@@ -64,8 +60,11 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   #myCarousel {
+    .carousel-item{
+      background-position: center;
+    }
     .component-fade-enter-active, .component-fade-leave-active {
       transition: opacity 1s ease-in-out;
     }
@@ -76,7 +75,7 @@
     position: relative;
     width: 100%;
     background-color: #fff;
-    .carousel-container {
+    /*.carousel-container {
       list-style: none;
       .carousel-item {
         position: absolute;
@@ -98,6 +97,7 @@
       z-index: 10;
       bottom: 30px;
       width: 100%;
+      display: none;
       margin: 0 auto;
       text-align: center;
       span {
@@ -127,40 +127,38 @@
         transition: box-shadow 0.3s ease;
         transition: background-color 0.3s ease;
       }
-    }
+    }*/
     // 轮播点按钮
-    .carousel-control {
-      top: 50%;
+    .el-carousel__arrow {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.4);
+      border: 0px transparent;
+      top: 55%;
       margin-top: -30px;
-      opacity: 0;
-      width: 40px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
+      border-radius: 100px;
       z-index: 100;
-      color: $white-max;
       display: block;
       font-size: 30px;
       cursor: pointer;
       overflow: hidden;
-      line-height: 60px;
+      line-height: 50px;
       position: absolute;
-      background: transparent;
       text-align: center;
-      &.left {
-        left: 1%;
+      &:hover {
+        color: #c41335;
       }
-      &.right {
-        right: 1%;
-      }
-      &.left:hover, &.right:hover {
-        color: #fdfdfd;
-        background: rgba(0, 0, 0, 0.5);
-        border: 0px transparent;
-      }
+    }
+    .el-carousel__arrow--left {
+      left: 5%;
+    }
+    .el-carousel__arrow--right {
+      right: 5%;
     }
     //轮播翻页按钮
-    &:hover .carousel-control {
+    /*&:hover .carousel-control {
       opacity: 1;
-    }
-
+    }*/
   }
 </style>

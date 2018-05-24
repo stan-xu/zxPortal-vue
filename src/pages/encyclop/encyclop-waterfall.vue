@@ -1,6 +1,6 @@
 <template>
   <div id="encyclop-waterfall" class="container">
-    <el-row :gutter="20" v-loading.lock="isLoading" class="grid-container">
+    <el-row v-loading.lock="isLoading" class="grid-container">
       <el-col :span="6" tag="ul" v-for="(ul,index) in ulList" ref="ul" :id="'ul'+index" class="grid"
               :key="index">
         <li v-for="item in ulList[index]" class="grid-item">
@@ -44,7 +44,7 @@
       getItems: function (id) {
         this.isLoading = true
         this.page++
-        this.$api.get('/api', {method: 'querywaterfall', page: this.page, pagesize: 50, taxonomyid: id}, (r) => {
+        this.$api.get('/api', {method: 'querywaterfall', page: this.page, pagesize: 20, taxonomyid: id}, (r) => {
           this.baseList = r.data.list
           setTimeout(() => {
             this.ulList.map(value => {

@@ -1,10 +1,8 @@
 <template>
   <div id="encyclop">
-    <my-header :selected="5"></my-header>
-    <div class="container">
-      <router-link to="/"><img src="./images/en-banner.jpg" class="img-responsive center-block banner"></router-link>
-    </div>
-    <Encyclop-menu></Encyclop-menu>
+    <my-header :selected="1"></my-header>
+    <!-- <Encyclop-menu></Encyclop-menu> -->
+    <!-- <Encyclop-waterfall></Encyclop-waterfall> -->
     <router-view/>
     <my-footer></my-footer>
   </div>
@@ -13,17 +11,22 @@
 <script>
   import MyHeader from '../../components/myHeader'
   import MyFooter from '../../components/myFooter'
-  import EncyclopMenu from './encyclop-menu'
+  // import EncyclopWaterfall from './encyclop-waterfall'
+
 
   export default {
     components: {
       MyFooter,
-      MyHeader,
-      EncyclopMenu
+      MyHeader
+      // EncyclopWaterfall
+      // EncyclopMenu
     },
     name: 'encyclop'
   }
 </script>
 
 <style lang="scss">
+  #encyclop{
+    .top10{margin-top:10px;border-radius: 3px;}
+  }
 </style>

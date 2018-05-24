@@ -4,9 +4,9 @@
       <div class="content">
         <div class="title"><h3>国内第一个消防急救实验观察类真人秀节目</h3></div>
         <div>
-          《紧急呼叫119》贵阳消防篇将于12月28暖心开拍，东方卫视知名主持人姜波，著名男歌手黄征，豪华制作班底亲情加盟。
-          让大家真正了解和掌握更多专业且正确的危险处置和自救的方法。目前，该节目计划按季播形式来制作，每季十二期。
-          医院、学校、KTV、洗浴中心、商场、商务楼等十二个人员密集的场所将作为拍摄地点。
+          《紧急呼叫119》贵阳消防篇已于2017年12月28日暖心开拍，东方卫视知名主持人姜波，著名男歌手黄征，豪华制作<br>
+          班底亲情加盟。让大家真正了解和掌握更多专业且正确的危险处置和自救的方法。目前，该节目计划按季播形<br>
+          式来制作，每季十二期。医院、学校、KTV、洗浴中心、商场、商务楼等十二个人员密集的场所将作为拍摄地点。
         </div>
       </div>
       <div class="center">
@@ -133,7 +133,7 @@
         },
         moduleList: [
           {
-            name: '定制场景',
+            name: '贵州定制场景',
             icon: require('./images/list-img1.jpg')
           },
           {
@@ -250,7 +250,8 @@
       margin-top: 53px;
       padding: 38px;
       line-height: 34px;
-      text-indent: 36px;
+      /*text-indent: 36px;*/
+      text-align: center;
       border: 1px solid #b7d6ff;
       font-size: 18px;
       .title {

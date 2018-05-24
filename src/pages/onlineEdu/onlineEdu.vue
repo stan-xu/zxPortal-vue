@@ -1,6 +1,6 @@
 <template>
   <div id="educaition">
-    <my-header :selected="3"></my-header>
+    <my-header :selected="6"></my-header>
     <education-program></education-program>
     <education-exam></education-exam>
     <education-ready></education-ready>

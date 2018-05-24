@@ -1,46 +1,175 @@
 <template>
+  
   <section id="company-introduction">
-    <el-row>
-      <el-col :span="12">
-        <img src="./images/company-introduction.png" alt="" class="img-responsive">
+    <div class="redLine"></div>
+    <div class="container">
+      <el-row>
+      <el-col :span="2" class="introduction-text v-outter-table title-h4">
+        <h4>红门e家:</h4>
       </el-col>
-      <el-col :span="12" class="introduction-text v-outter-table">
-        <div class="v-table-cell">
-          <h1>中消在线<br>互联网+安全平台</h1>
-          <p>中消在线成立于2016年，是中国首家以“互联网+”的思维模式打造的业内资源整合性消防综合服务平台。致力于消防安全宣传，为企业提供一站式消防服务：技术咨询、解决方案及培训课程。2017年，中消在线杭州技术部成立，主要从事中消平台、中消APP以及智慧消防、物联网等高新科技开发及研究，对接及引入国内外先进消防技术和产品。</p>
-          <p>中消在线以服务社会、服务大众为宗旨，普及消防常识，增强全民消防意识，提高自防自救能力，未来我们将实现中消救援、全民救援的新模式，我们汇集行业大数据，融合产业链优势资源，做一个真正意义上的生命安全的保障平台!</p>
-        </div>
+      <el-col :span="22">
+        <ul class="detail-list">
+          <li class="col" v-for="(item,index) in detaillists" :key="index">
+            <a v-bind:href="item.url" target="_blank">{{item.name}}
+            </a>
+          </li>
+        </ul>
       </el-col>
     </el-row>
+    </div>
+    
   </section>
 </template>
 
 <script>
   export default {
-    name: 'company-introduction'
+    name: 'company-introduction',
+    data () {
+      return {
+        scroll: '',
+        detaillists: [
+          {
+            url: 'http://www.bjxfj.gov.cn/',
+            name: '北京'
+          },
+          {
+            url: 'http://www.fire.sh.cn/infoplat/platformData/infoplat/pub/xiaofang_2542/shouye_7602/index.html',
+            name: '上海'
+          },
+          {
+            url: 'http://www.gdfire.gov.cn/',
+            name: '广东'
+          },
+          {
+            url: 'http://www.tjxf.gov.cn/',
+            name: '天津'
+          },
+          {
+            url: 'http://www.cqfire.com/main/',
+            name: '重庆'
+          },
+          {
+            url: 'http://www.hebxf.gov.cn/',
+            name: '河北'
+          },
+          {
+            url: 'http://sx.119.gov.cn/xiaofang/',
+            name: '山西'
+          },
+          {
+            url: 'http://lns.ln119.gov.cn/xiaofang/',
+            name: '辽宁'
+          },
+          {
+            url: 'http://www.jxfxh119.com/',
+            name: '吉林'
+          },
+          {
+            url: 'http://www.hlfire.gov.cn/index.aspx?security_verify_data=313434302c393030',
+            name: '黑龙江'
+          },
+          {
+            url: 'http://www.js119.com/',
+            name: '江苏'
+          },
+          {
+            url: 'http://www.zjxf119.com/xiaofang',
+            name: '浙江'
+          },
+          {
+            url: 'http://www.ah119.cn/',
+            name: '安徽'
+          },
+          {
+            url: 'http://www.fjxf.gov.cn/xiaofang/',
+            name: '福建'
+          },
+          {
+            url: 'http://www.jx-fire.gov.cn/',
+            name: '江西'
+          },
+          {
+            url: 'http://sd.119.gov.cn/xiaofang/',
+            name: '山东'
+          },
+          {
+            url: 'http://www.119.ha.cn/',
+            name: '河南'
+          },
+          {
+            url: 'http://www.hbfire.com/',
+            name: '湖北'
+          },
+          {
+            url: 'http://www.hn119.gov.cn/',
+            name: '湖南'
+          },
+          {
+            url: 'http://www.hnsxfxh.com/',
+            name: '海南'
+          },
+          {
+            url: 'http://www.sc119.gov.cn/',
+            name: '四川'
+          },
+          {
+            url: 'http://www.gzxf119.gov.cn/xiaofang/',
+            name: '贵州'
+          },
+          {
+            url: 'http://www.yn119.cn/',
+            name: '云南'
+          },
+          {
+            url: 'http://www.sn119.gov.cn/',
+            name: '陕西'
+          },
+          {
+            url: 'http://www.gs119.gov.cn/',
+            name: '甘肃'
+          },
+          {
+            url: 'http://www.qh119.gov.cn/',
+            name: '青海'
+          },
+          {
+            url: 'http://www.nmgxfw.com/',
+            name: '内蒙古'
+          },
+          {
+            url: 'http://www.gx119.gov.cn/',
+            name: '广西'
+          },
+          {
+            url: 'http://www.xz119.gov.cn/xiaofang',
+            name: '西藏'
+          },
+          {
+            url: 'http://www.nx119.org.cn/',
+            name: '宁夏'
+          },
+          {
+            url: 'http://www.xjxf.com/',
+            name: '新疆'
+          },
+          {
+            url: 'http://www.zxzx119.com/article-reddoor-1.html',
+            name: '更多>>'
+          }
+        ]
+      }
+    }
   }
 </script>
 
 <style lang="scss">
   #company-introduction {
-    background-color: #f5f4f5;
-    height: 540px;
-    img {
-      padding: 0;
-      height: 540px;
-    }
-    .introduction-text {
-      height: 540px;
-      h1 {
-        margin-top: 0;
-        font-size: 30px;
-        line-height: 50px;
-      }
-      p {
-        padding-right: 70px;
-        font-size: 18px;
-        line-height: 30px;
-      }
+    margin-bottom: 10px;
+    .redLine{width:100%;height:1px;background-color:#cc0033;margin-bottom: 10px;}
+    .title-h4{color: #cc0033;font-size: 18px;letter-spacing:2px;line-height: 22px;}
+    .detail-list li{list-style: none;margin-left: -10px;line-height: 20px;
+        a{font-size: 14px;color: #cc0033;float: left;margin-left: 15px;}
+        a:hover{text-decoration: underline;}
     }
   }
 </style>

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '../encyclop-content'
+import Index from '../encyclop-content-new'
 import Rule from '../encyclop-rulecontent'
 import RuleMore from '../encyclop-rule-more'
 import RuleIndex from '../encyclop-rule-index'

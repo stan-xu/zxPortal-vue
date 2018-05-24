@@ -6,18 +6,18 @@ const path = require('path')
 
 module.exports = {
   dev: {
-
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
       '/': {
-        target:'http://jpress.dev.hzjuxiu.com:21009/',
+        target:'http://192.168.0.106:9003/',
         secure:false,
         changeOrigin:true
       }
     },
-
+    //http://192.168.0.102:8082
+    //http://192.168.0.106:9003/
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.HOST, if port is in use, a free one will be determined
